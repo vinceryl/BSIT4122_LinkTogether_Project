@@ -39,6 +39,8 @@ public class GameManager : NetworkBehaviour
 
         // Tell all clients to show the victory screen with the final time
         ShowVictoryClientRpc(timer);
+
+        FindObjectOfType<ChatManager>().SendSystemAlertServerRpc("THE SUMMIT HAS BEEN REACHED!");
     }
 
     [ClientRpc]
